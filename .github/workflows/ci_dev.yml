@@ -11,8 +11,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps : |
-    - name : ssh into mechine
-    - run : |
+     name : ssh into mechine
+     run : |
        echo ${{secrets.SSH_PRIVATE}} &> ~/ssh_key
        ssh -i ~/ssh_key harshit@136.111.126.165
        cd Book-my-show/
