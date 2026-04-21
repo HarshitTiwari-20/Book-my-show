@@ -157,3 +157,28 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters)
 - [Configuration Options](https://turborepo.dev/docs/reference/configuration)
 - [CLI Usage](https://turborepo.dev/docs/reference/command-line-reference)
+
+
+
+
+```
+init turbo repo 
+make file in packages/prisma -->  npm init -y   
+change "name": "@repo/db"
+npx tsc --init
+remove all tsconfig.json code and add { "entends" : "@repo/typescript-config/base.json"}
+in package.json add devDepnecenc: { "@repo/type-config": "workspace:*"}
+
+pnpm add prisma
+npx prisma init
+add database url
+npx prisma migrate dev
+npx prisma generate
+prisma/src/index.ts
+
+package.json  "exorts": {" ./client": "./src/index.ts"}
+
+see github(book-my-show)___.>>>
+
+sudo nginx -s reload
+```
