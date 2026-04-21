@@ -13,14 +13,14 @@ jobs:
     steps : |
      name : ssh into mechine
      run : |
-       echo ${{secrets.SSH_PRIVATE}} &> ~/ssh_key
-       ssh -i ~/ssh_key harshit@136.111.126.165
-       cd Book-my-show/
-       pnpm install
-       pnpm run build
-       pm2 restart fe-server
-       pm2 restart http-server
-       pm2 restart ws-server
+      echo ${{secrets.SSH_PRIVATE}} &> ~/ssh_key
+      ssh -i ~/ssh_key harshit@136.111.126.165
+      cd Book-my-show/
+      pnpm install
+      pnpm run build
+      pm2 restart fe-server
+      pm2 restart http-server
+      pm2 restart ws-server
 
 
      
